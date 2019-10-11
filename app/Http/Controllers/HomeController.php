@@ -16,6 +16,8 @@ class HomeController extends Controller
         $this->middleware('auth');
     }
 
+    //protected $redirectTo = '/';
+
     /**
      * Show the application dashboard.
      *
@@ -23,6 +25,7 @@ class HomeController extends Controller
      */
     public function index()
     {
+         echo "<script>setTimeout(function(){ window.location.href = '/'; }, 5000);</script>";
         return view('home');
     }
 }
